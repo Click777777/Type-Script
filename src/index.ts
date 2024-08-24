@@ -100,3 +100,51 @@ console.log(logCustomer?.birthday?.getFullYear());
 // optional call
 let log: any = null;
 console.log(log?.("a"));
+
+// nullish coalescing operator
+// "falsy" values (0, false, NaN, "") the same way it treats null or undefined.
+let value = null;
+let result = value ?? "i am null";
+console.log(result);
+
+let value21;
+let result21 = value21 ?? "i am undefined";
+console.log(result21);
+
+let values = 0;
+let results = values || "i am zero";
+console.log(results);
+
+let score = 0;
+let result3 = score ?? 100;
+console.log(result3); // Output: 0
+
+let isActive = false;
+let result55 = isActive ?? true;
+console.log(result55); // Output: false
+
+let values88 = "";
+let results88 = values88 ?? "i am empty string";
+console.log(results88);
+
+let values99 = NaN;
+let results99 = values99 ?? "i am NaN";
+console.log(results99);
+
+// type assertion
+// const getWithId=document.getElementById("id") as HTMLElement
+// const getWithId = <HTMLElement>document.getElementById("id");
+// getWithId.innerHTML = "hello";
+
+// unknown type
+function render(document: unknown) {
+  // document.hero() // by using unknown type so we can't call undefined method in document
+  if (typeof document === "string") document.toUpperCase();
+}
+
+// never type
+function processFun(): never {
+  while (true) {}
+}
+// processFun();
+// console.log("first");

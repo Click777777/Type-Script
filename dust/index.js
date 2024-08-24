@@ -50,4 +50,32 @@ console.log("logCustomer is ", logCustomer);
 console.log((_a = logCustomer === null || logCustomer === void 0 ? void 0 : logCustomer.birthday) === null || _a === void 0 ? void 0 : _a.getFullYear());
 let log = null;
 console.log(log === null || log === void 0 ? void 0 : log("a"));
+let value = null;
+let result = value !== null && value !== void 0 ? value : "i am null";
+console.log(result);
+let value21;
+let result21 = value21 !== null && value21 !== void 0 ? value21 : "i am undefined";
+console.log(result21);
+let values = 0;
+let results = values || "i am zero";
+console.log(results);
+let score = 0;
+let result3 = score !== null && score !== void 0 ? score : 100;
+console.log(result3);
+let isActive = false;
+let result55 = isActive !== null && isActive !== void 0 ? isActive : true;
+console.log(result55);
+let values88 = "";
+let results88 = values88 !== null && values88 !== void 0 ? values88 : "i am empty string";
+console.log(results88);
+let values99 = NaN;
+let results99 = values99 !== null && values99 !== void 0 ? values99 : "i am NaN";
+console.log(results99);
+function render(document) {
+    if (typeof document === "string")
+        document.toUpperCase();
+}
+function processFun() {
+    while (true) { }
+}
 //# sourceMappingURL=index.js.map
